@@ -55,6 +55,7 @@ class Server extends BaseServer
     {
         $user = new User();
         $user->id = $data['id'];
+        $user->email = $data['email'];
         $user->nickname = $data['username'];
         $user->extra = array_diff_key($data, array_flip(['id', 'username']));
 
